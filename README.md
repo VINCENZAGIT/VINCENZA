@@ -2,6 +2,7 @@
 turma: 3C2
 
 integrantes:
+
 Samuel Macedo Cruz Alves - 20302042
 
 Arthur Clark Francisco - 22301216
