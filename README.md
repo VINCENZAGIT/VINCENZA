@@ -6,14 +6,23 @@
 
 ✅ Requisitos
  RF01 – O sistema deve permitir o cadastro de usuários
+ 
  RF02 – O usuário deve poder redefinir a senha
+ 
  RF06 – O usuário deve poder alternar para o modo escuro
+ 
  RF08 – O sistema deve oferecer suporte a múltiplos idiomas
+ 
  RF09 – Mostrar possíveis planos de financiamento para compra do carro
+ 
  RF11 – Informação sobre disponibilidade do veículo no estoque da concessionária
+ 
  RF14 – Visualização 360° de todos os carros mais vendidos
+ 
  RF15 – Página de oferta de veículos
+ 
  RF16 – Reserva online de veículos
+ 
  RF18 – Catálogo online de veículos disponíveis
 
 
@@ -33,8 +42,8 @@ Raul Gonçalves  - 22301771
 ## Estrutura de Diretórios
 (os arquivos html, css, e js está fora da pasta sistema mas posteriormente vamos organizar melhor)
 VINCENZA/
-├── index.php               
-├── App/                      
+├── index.php   
+├── App/         
 │   ├── Config/               # Configurações do sistema
 │   │   └── Database.php      # Configuração do banco de dados
 │   ├── Controllers/          # Controladores da aplicação
