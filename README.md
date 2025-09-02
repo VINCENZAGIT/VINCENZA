@@ -4,6 +4,18 @@
 ## Descrição
  VINCENZA é uma concessionária online, nosso objetivo é facilitar a vida de quem deseja comprar um carro sem precisar ir para uma loja física, fazemos todo o processo de forma remota, portanto será possível comprar e até mesmo vender seu carro usado para dar de entrada, fazemos parcelas justas além de oferecermos um rico catálogo eficiente.
 
+✅ Requisitos
+ RF01 – O sistema deve permitir o cadastro de usuários
+ RF02 – O usuário deve poder redefinir a senha
+ RF06 – O usuário deve poder alternar para o modo escuro
+ RF08 – O sistema deve oferecer suporte a múltiplos idiomas
+ RF09 – Mostrar possíveis planos de financiamento para compra do carro
+ RF11 – Informação sobre disponibilidade do veículo no estoque da concessionária
+ RF14 – Visualização 360° de todos os carros mais vendidos
+ RF15 – Página de oferta de veículos
+ RF16 – Reserva online de veículos
+ RF18 – Catálogo online de veículos disponíveis
+
 
 ## Integrantes
 Samuel Macedo Cruz Alves - 20302042
