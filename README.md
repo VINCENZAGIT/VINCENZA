@@ -109,4 +109,5 @@ composer install
 
 ## Observações
 <!-- Coloque aqui informações adicionais, como problemas conhecidos, melhorias futuras ou instruções extras -->
+não conseguimos conectar o sistema php com o resto do site.
 melhorias futuras vão consistir em uma melhora na estruturação do projeto e polimento do visual do site.
