@@ -1,55 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bakbak+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/619d5231f4.js" crossorigin="anonymous"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Vincenza - Concessionária</title>
 </head>
 <body>
-    <div id="login">
-        <h1>Registro<h1>
-            <div id="baseLogin">
-                <div class="input-container">
-                        Nome completo
-                        <div><input type="text"></div>
-                        <br>
-                        Data de nascimento
-                        <div id="container-flex">
-                        <input type="date" name="date1" id="date1"/>        
-                        </div>
-                        <br>
-                        E-mail
-                        <div><input type="email"></div>
-                        <br>
-                        Telefone
-                        <div><input type="tel"></div>
-                        <br>
-                        Senha
-                        <div><input type="password"></div>
-                        <br>
-                        Repetir senha
-                        <div><input type="password"></div>
-                        <br>
-                </div>
-                <div><input type="button" value="Cadastrar" id="botao"></div>
-            </div>
+    <div id="upperbar">
+        <div id="upper1"> 
+            <img id="logo" src="1000018033.png" alt="Logo Vincenza">
+            <p>vincenza</p>
+        </div>
+        <div id="upper2">
+           <span>
+  <a href="login.html">registro/login</a>
+             </span>
+            <a href="">estoque <span></span></a>
+            <a href="">catálogo <span></span></a>
+            <a href="">reserva <span></span></a>
+            <a href="">financiamento <span></span></a>
+        </div>
+        <div id="upper3">
+            <i class="fas fa-user"></i>
+        </div>
     </div>
-    <div id="registro">
-        <h1>Login<h1>
-            <div id="baseRegistro">
-                <div class="input-container">
-                        E-mail
-                        <div><input type="email"></div>
-                        <br>
-                        Senha
-                        <div><input type="password"></div>
-                        <br>
-                </div>
-                <div><input type="button" value="Login" id="botao"></div>
-            </div>
+
+    <div id="carrossel">
+        <p id="img1" onclick="passcar()" style="background-image: url(carro1.png);">
+            <i class="fa-solid fa-angle-left fa-2xl"></i>
+        </p>
+        <p id="img2" style="background-image: url(carro2.png);"></p>
+        <p id="img3" onclick="backcar()" style="background-image: url(carro3.png);">
+            <i class="fa-solid fa-angle-left fa-2xl"></i>
+        </p>
+        <p id="barpass" class="ocultarbarra"></p>
+        <p id="barback" class="ocultarbarra"></p>
     </div>
+
+    <div id="center">
+        <div id="searchdiv">
+            <div id="nameshow">
+                <p id="name">Carro</p>
+            </div>
+            <div id="carrobusca">
+                <p id="carroshow"></p>
+                <div id="descricaoshow">
+                    <td>Modelo: SUV</td>
+                    <td>Ano: 2023</td>
+                    <td>Km: 15.000</td>
+                    <td>Combustível: Flex</td>
+                </div>
+            </div>
+            <div id="sch1">
+                <a style="margin-left: 0;">todos</a>
+                <a>novos</a>
+                <a>usados</a>
+            </div>
+            <div id="sch2">
+                <span id="searchbar">
+                    <input type="text" id="carpesquisa" placeholder="pesquise um carro pelo nome">
+                    <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottonbar">
+        <h2>Vincenza Concessionária</h2>
+        <p>Telefone: (11) 9999-9999 | Email: contato@vincenza.com.br</p>
+        <p>Horário de funcionamento: Segunda a Sábado, 8h às 21h</p>
+    </div>
+
+    <script>
+        function passcar() {
+            console.log("Passar carrossel");
+        }
+
+        function backcar() {
+            console.log("Voltar carrossel");
+        }
+
+        document.getElementById('lupa').addEventListener('click', function() {
+            const searchTerm = document.getElementById('carpesquisa').value;
+            if (searchTerm) {
+                alert(`Pesquisando por: ${searchTerm}`);
+            }
+        });
+
+        document.getElementById('carpesquisa').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('lupa').click();
+            }
+        });
+    </script>
 </body>
 </html>
-
 
