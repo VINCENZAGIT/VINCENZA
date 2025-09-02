@@ -109,5 +109,4 @@ composer install
 
 ## Observações
 <!-- Coloque aqui informações adicionais, como problemas conhecidos, melhorias futuras ou instruções extras -->
-temos um problema não identificado na qual o github abre o read.me ao invés do index.html.
-melhorias futuras vão consistir em uma melhora na estruturação do projeto e melhorias no código.
+melhorias futuras vão consistir em uma melhora na estruturação do projeto e polimento do visual do site.
