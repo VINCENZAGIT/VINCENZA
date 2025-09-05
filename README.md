@@ -109,5 +109,6 @@ composer install
 
 ## Observações
 <!-- Coloque aqui informações adicionais, como problemas conhecidos, melhorias futuras ou instruções extras -->
-não conseguimos conectar o sistema php com o resto do site.
-melhorias futuras vão consistir em uma melhora na estruturação do projeto e polimento do visual do site.
+Não sbaemos como conectar o sistema php com o resto do site mas tudo feito está na pasta sistema.
+Nosso modo escuro também não tá funcionando direito vamos revisar isso.
+Ademais, melhorias futuras vão consistir em uma melhora na estruturação do projeto e polimento do visual do site, além da finalizaçõ das futuras funcionalidades.
