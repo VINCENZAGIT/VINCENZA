@@ -70,7 +70,9 @@
     transition: all 0.22s linear;
     transform: scaleX(0.01) scaleY(1.8);
 }
-
+#upper2 a{
+    font-weight: 100;
+}
 #upper2 a:hover span{
     font:bold;
     opacity: 100%;
@@ -437,3 +439,4 @@
     font-size: 20%;
 }
 }
+
