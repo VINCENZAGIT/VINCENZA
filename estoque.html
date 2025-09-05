@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/619d5231f4.js" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="estoque.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="upeerdiv">
+        <div id="homeelogin">
+            <a  href=""><i class="fa-regular fa-circle-user"></i>Login</a>
+            <a href="inicio.html" style="text-decoration:underline;">Home</a>
+        </div>
+        <div id="buscadiv">
+            <li><input class="buscarmodelo" type="text" placeholder=" marca"><input type="text" placeholder=" modelo"></li>
+            <li><input type="text" placeholder=" modelo"><input type="text" placeholder=" modelo"></li>
+            <li><input type="text" style="width: 66%;"><input onclick="changecar()" id="buscarcarro" type="button" value="Buscar Carro" style="width: 30.2%;"></li>
+        </div>
+
+    </div>    
+
+    <div id="catalog">
+        <div id="section360"><section class="container">
+        <img class="carimg" src="./estoque/amarok/1.webp" alt="car">
+    </section></div>
+    <div id="bottondiv">
+    </div></div>
+     <button onclick="addc()">Adicionar Item</button>
+
+    <script src="estoque.js"></script>
+    
+</body>
+</html>
