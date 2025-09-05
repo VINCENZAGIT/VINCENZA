@@ -26,7 +26,7 @@ function changecar(){
         if(car.car == search){
             console.log("O carro existe");
             currentcar = search;
-            imgcar.src = `./estoque/${currentcar}/${currentImage}.webp`;
+            imgcar.src = `./${currentcar}/${currentImage}.webp`;
             existe=true;
             max = car.i
         }
@@ -43,7 +43,7 @@ function changecar2(){
         if(car.car == search){
             console.log("O carro existe");
             currentcar = search;
-            imgcar.src = `./estoque/${currentcar}/${currentImage}.webp`;
+            imgcar.src = `./${currentcar}/${currentImage}.webp`;
             existe=true;
             max = car.i
         }
@@ -76,7 +76,7 @@ const updateimg = (direction) =>{
         }
     }
 
-    imgcar.src = `./estoque/${currentcar}/${currentImage}.webp`
+    imgcar.src = `./${currentcar}/${currentImage}.webp`
 }
 
 
@@ -117,7 +117,7 @@ let contador = 1;
       // joga na grid
       grid.appendChild(item);
       item.appendChild(img);
-      img.src = `./estoque/${estoque[num].car}/1.webp`;
+      img.src = `./${estoque[num].car}/1.webp`;
       item.classList.add("item");
       img.classList.add("imgitem");
       item.addEventListener("click", function( ){
@@ -127,7 +127,7 @@ let contador = 1;
         if(car.car == search){
             console.log("O carro existe");
             currentcar = search;
-            imgcar.src = `./estoque/${currentcar}/${currentImage}.webp`;
+            imgcar.src = `./${currentcar}/${currentImage}.webp`;
             existe=true;
             max = car.i
         }
@@ -136,4 +136,5 @@ let contador = 1;
         }
     });
       })
+
     }
