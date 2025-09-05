@@ -1,108 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bakbak+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bakbak+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Staatliches&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/619d5231f4.js" crossorigin="anonymous"></script>  
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">   
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="inicio.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincenza - Concessionária</title>
+    <title>Document</title>
 </head>
-<body>
+<body style="margin: 0;">
     <div id="upperbar">
         <div id="upper1"> 
-            <img id="logo" src="1000018033.png" alt="Logo Vincenza">
-            <p>vincenza</p>
+        <img id="logo" src="1000018033.png"> <p style="font-family: 'Quicksand', sans-serif"> incenza</p></img>
         </div>
-        <div id="upper2">
-           <span>
-  <a href="login.html">registro/login</a>
-             </span>
-            <a href="">estoque <span></span></a>
-            <a href="">catálogo <span></span></a>
-            <span>
-  <a href="reserva.html">reserva</a>
-             </span>
-            <a href="">financiamento <span></span></a>
-        </div>
-        <div id="upper3">
-            <i class="fas fa-user"></i>
-        </div>
+<div id="upper2">
+    <a href="" class="lnk1">estoque <span></span></a>
+    <a href="" class="lnk2">catálogo <span></span></a>
+    <a href="" class="lnk3">reserva <span></span></a>
+    <a href="" class="lnk4">financiamento <span></span></a>
+</div>
+<div id="upper3">
+
+    <div><span id="lgn" onclick="changelg()">linguagem</span> <span id="linguagemslct" style="background-image:url(Flag_of_Brazil.svg.webp); background-position: center; background-size: cover;"></span></div>
+    <div><span onclick="darkmode()" id="darkmd"><span id="balldm"></span></span></div>
+
+</div>
     </div>
+
 
     <div id="carrossel">
         <p id="img1" onclick="passcar()" style="background-image: url(carro1.png);">
-            <i class="fa-solid fa-angle-left fa-2xl"></i>
+            <i class="fa-solid fa-angle-left fa-2xl" style="color: rgb(255, 255, 255); width: 100%; height: 100%; font-size: 500%; display: flex; align-items: center; justify-content: center;"></i>
         </p>
         <p id="img2" style="background-image: url(carro2.png);"></p>
         <p id="img3" onclick="backcar()" style="background-image: url(carro3.png);">
-            <i class="fa-solid fa-angle-left fa-2xl"></i>
+            <i class="fa-solid fa-angle-left fa-2xl" style="color: rgb(255, 255, 255); rotate: 180deg; width: 100%; height: 100%; font-size: 500%; display: flex; align-items: center; justify-content: center;"></i>
         </p>
-        <p id="barpass" class="ocultarbarra"></p>
-        <p id="barback" class="ocultarbarra"></p>
+        <p id="barpass" class="ocultarbarra" style="width: 15%; position:absolute; border: 0;"></p>
+        <p id="barback" class="ocultarbarra" style="width: 15%; position:absolute; border: 0;"></p>
     </div>
 
     <div id="center">
         <div id="searchdiv">
-            <div id="nameshow">
-                <p id="name">Carro</p>
-            </div>
+             <div id="nameshow" style="width: min-content;">
+                    <p id="name" style="padding-left: 0.5vh;"> Carro </p> <span style="color: rgba(0, 0, 0, 0); width: 6vh; height: 3.2vh;"></span>
+                </div>
             <div id="carrobusca">
-                <p id="carroshow"></p>
+                <p id="carroshow">
+                </p>
                 <div id="descricaoshow">
-                    <td>Modelo: SUV</td>
-                    <td>Ano: 2023</td>
-                    <td>Km: 15.000</td>
-                    <td>Combustível: Flex</td>
+                    <div style="border: solid rgb(255, 232, 206) 1px; width: 100%; border-radius: 3px;">
+                   <span id="sp1" style="width: 20%;">
+                    <li>Nome</li>
+                    <li>Marca</li>
+                    <li>Cor</li>
+                    <li>Preço</li>
+                    <li>Fabricante</li>
+                    <li>Tipo</li>
+                    <li>Combustivel</li>
+                   </span>
+                   <span style="width: 80%;">
+                    <li>Nome</li>
+                    <li>Marca</li>
+                    <li>Cor</li>
+                    <li>Preço</li>
+                    <li>Fabricante</li>
+                    <li>Tipo</li>
+                    <li>Combustivel</li>
+                   </span>
+                </div>
                 </div>
             </div>
-            <div id="sch1">
-                <a style="margin-left: 0;">todos</a>
-                <a>novos</a>
-                <a>usados</a>
-            </div>
+            <div id="sch1"> <a style="margin-left: 0;">todos</a> <a>novos</a> <a>usados</a> </div>
             <div id="sch2">
-                <span id="searchbar">
-                    <input type="text" id="carpesquisa" placeholder="pesquise um carro pelo nome">
-                    <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-                </span>
+                <span id="searchbar"><input autocomplete="off" oninput="found()" style="width: 90%; height: 4vh; background-color: rgb(255, 255, 255);" type="text" id="carpesquisa" placeholder="pesquise um carro pelo nome"><i class="fa-solid fa-magnifying-glass" style="position: relative;" id="lupa"></i></span>
             </div>
         </div>
     </div>
 
     <div id="bottonbar">
-        <h2>Vincenza Concessionária</h2>
-        <p>Telefone: (11) 9999-9999 | Email: contato@vincenza.com.br</p>
-        <p>Horário de funcionamento: Segunda a Sábado, 8h às 21h</p>
+        Um site que faz acontecer
     </div>
-
-    <script>
-        function passcar() {
-            console.log("Passar carrossel");
-        }
-
-        function backcar() {
-            console.log("Voltar carrossel");
-        }
-
-        document.getElementById('lupa').addEventListener('click', function() {
-            const searchTerm = document.getElementById('carpesquisa').value;
-            if (searchTerm) {
-                alert(`Pesquisando por: ${searchTerm}`);
-            }
-        });
-
-        document.getElementById('carpesquisa').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.getElementById('lupa').click();
-            }
-        });
-    </script>
 </body>
 </html>
+
 
 
 
