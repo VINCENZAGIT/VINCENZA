@@ -1,5 +1,4 @@
 
-
 var carroatual = 0;
 
 function backcar(){
@@ -128,15 +127,72 @@ function setcar(){
     document.getElementById("barback").style.backgroundImage = car3
 }
 
-
-function pesquisar(){
-  var nameshow = document.getElementById("name")
+function changecar(carro){
   var carroimg = document.getElementById("carroshow")
+  carroimg.style.backgroundImage =  carro
+}
+
+function pesquisa(){
+  var nameshow = document.getElementById("name")
+  var carrostring =  document.getElementById("carpesquisa").value
+  var carropesquisado = carrostring.toLowerCase()
+
+  nameshow.innerHTML = carropesquisado
+  if (carropesquisado == "lamborgini"){
+    changecar("url(carro1.png)")
+  }
+}
+function found(){
+  var lupa = document.getElementById("lupa")
   var carrostring =  document.getElementById("carpesquisa").value
   var carropesquisado = carrostring.toLowerCase()
   if (carropesquisado == "lamborgini"){
-    carroimg.style.backgroundImage = "url(carro1.png)"
-    nameshow.innerHTML = carropesquisado
+    lupa.classList.toggle("giralupa")
   }
+}
+var linguagem = 0
+function changelg(){
+  const lg = document.getElementById("linguagemslct")
+  const l1 = document.querySelector(".lnk1")
+  const l2 = document.querySelector(".lnk2")
+  const l3 = document.querySelector(".lnk3")
+  if(linguagem == 0){
+    lg.style.backgroundImage = "url(Flag_of_the_United_States.svg.png)"
+    linguagem = 1;
+  }else if (linguagem == 1){
+    lg.style.backgroundImage = "url(Flag_of_Brazil.svg.webp)"
+    linguagem = 0;
+  }
+
+  if(linguagem==0){
+    l1.innerHTML = "estoque"
+    l2.innerHTML = "catálogo"
+    l3.innerHTML = "reserva"
+  }
+  else{
+    l1.innerHTML = "stock"
+    l2.innerHTML = "catalog"
+    l3.innerHTML = "reservation"
+  }
+
+}
+
+
+  var darkmd = 0
+function darkmode(){
+  const balldm = document.getElementById("balldm")
+  const darkspan = document.getElementById("darkmd")
+  
+  balldm.classList.toggle("balldark")
+  if (darkmd == 0){
+  balldm.style.backgroundColor = "rgb(255, 232, 206)"
+  darkspan.style.backgroundColor = "rgba(0, 0, 0, 1)"
+  darkmd = 1
+  } else {
+  balldm.style.backgroundColor = "rgba(0, 0, 0, 1)"
+  darkspan.style.backgroundColor = "rgb(255, 232, 206)"
+  darkmd = 0
+  }
+  
 }
 
