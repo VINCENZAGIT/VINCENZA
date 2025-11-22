@@ -109,12 +109,10 @@ let contador = 1;
       let grid = document.getElementById("bottondiv");
         
       let num = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-      // cria um elemento novo
       let img = document.createElement("img");
       let item = document.createElement("section");
       item.innerText = estoque[num].car;
 
-      // joga na grid
       grid.appendChild(item);
       item.appendChild(img);
       img.src = `./${estoque[num].car}/1.webp`;
@@ -138,3 +136,87 @@ let contador = 1;
       })
 
     }
+
+var linguagem = 0
+function changelg(){
+  const lg = document.getElementById("linguagemslct")
+  const lgn = document.getElementById("lgn")
+  const loginText = document.getElementById("login-text")
+  const homeLink = document.getElementById("home-link")
+  const backLink = document.getElementById("back-link")
+  const textRecomendacoes = document.getElementById("textrecomendacoes")
+  const addItemBtn = document.getElementById("add-item-btn")
+  const buscarBtn = document.getElementById("buscarcarro")
+  const inputMarca = document.getElementById("input-marca")
+  const inputModelo = document.getElementById("input-modelo")
+  const inputModelo2 = document.getElementById("input-modelo2")
+  const inputModelo3 = document.getElementById("input-modelo3")
+  
+  if(linguagem == 0){
+    lg.style.backgroundImage = "url(Flag_of_the_United_States.svg.png)"
+    linguagem = 1;
+    lgn.innerHTML = "language"
+    loginText.innerHTML = "Login"
+    homeLink.innerHTML = "Home"
+    backLink.innerHTML = "Back"
+    textRecomendacoes.innerHTML = "Recommended for you"
+    addItemBtn.innerHTML = "Add Item"
+    buscarBtn.value = "Search Car"
+    inputMarca.placeholder = " Brand"
+    inputModelo.placeholder = " Model"
+    inputModelo2.placeholder = " Year"
+    inputModelo3.placeholder = " Fuel"
+    document.getElementById("input-search").placeholder = " Transmission"
+    if(document.getElementById("spec-title")) document.getElementById("spec-title").innerHTML = "Specifications"
+    if(document.getElementById("label-nome")) document.getElementById("label-nome").innerHTML = "Name"
+    if(document.getElementById("label-marca")) document.getElementById("label-marca").innerHTML = "Brand"
+    if(document.getElementById("label-combustivel")) document.getElementById("label-combustivel").innerHTML = "Fuel"
+    if(document.getElementById("label-cambio")) document.getElementById("label-cambio").innerHTML = "Transmission"
+    if(document.getElementById("label-ano")) document.getElementById("label-ano").innerHTML = "Year"
+  } else {
+    lg.style.backgroundImage = "url(Flag_of_Brazil.svg.webp)"
+    linguagem = 0;
+    lgn.innerHTML = "linguagem"
+    loginText.innerHTML = "Login"
+    homeLink.innerHTML = "Home"
+    backLink.innerHTML = "Voltar"
+    textRecomendacoes.innerHTML = "Recomendados para você"
+    addItemBtn.innerHTML = "Adicionar Item"
+    buscarBtn.value = "Buscar Carro"
+    inputMarca.placeholder = " Marca"
+    inputModelo.placeholder = " Modelo"
+    inputModelo2.placeholder = " Ano"
+    inputModelo3.placeholder = " Combustível"
+    document.getElementById("input-search").placeholder = " Câmbio"
+    // Traduzir especificações
+    if(document.getElementById("spec-title")) document.getElementById("spec-title").innerHTML = "Especificações"
+    if(document.getElementById("label-nome")) document.getElementById("label-nome").innerHTML = "Nome"
+    if(document.getElementById("label-marca")) document.getElementById("label-marca").innerHTML = "Marca"
+    if(document.getElementById("label-combustivel")) document.getElementById("label-combustivel").innerHTML = "Combustível"
+    if(document.getElementById("label-cambio")) document.getElementById("label-cambio").innerHTML = "Câmbio"
+    if(document.getElementById("label-ano")) document.getElementById("label-ano").innerHTML = "Ano"
+  }
+}
+
+var darkmd = 0
+function darkmode(){
+  const balldm = document.getElementById("balldm")
+  const darkspan = document.getElementById("darkmd")
+  const body = document.body
+  
+  balldm.classList.toggle("balldark")
+  body.classList.toggle("dark-mode")
+  
+  if (darkmd == 0){
+    balldm.style.backgroundColor = "rgb(255, 232, 206)"
+    darkspan.style.backgroundColor = "rgba(0, 0, 0, 1)"
+    darkmd = 1
+  } else {
+    balldm.style.backgroundColor = "rgba(0, 0, 0, 1)"
+    darkspan.style.backgroundColor = "rgb(255, 232, 206)"
+    darkmd = 0
+  }
+}
+
+    }
+
