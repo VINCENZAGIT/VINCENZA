@@ -1,4 +1,3 @@
-
 var carroatual = 0;
 
 function backcar(){
@@ -21,13 +20,6 @@ function passcar(){
     document.getElementById("car").innerHTML = carroatual;
 }
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
 
 
 var id = null;
@@ -153,46 +145,89 @@ function found(){
 var linguagem = 0
 function changelg(){
   const lg = document.getElementById("linguagemslct")
+  const lgn = document.getElementById("lgn")
   const l1 = document.querySelector(".lnk1")
   const l2 = document.querySelector(".lnk2")
   const l3 = document.querySelector(".lnk3")
+  const l4 = document.getElementById("lnk4")
+  const footerText = document.getElementById("footer-text")
+  const searchPlaceholder = document.getElementById("carpesquisa")
+  
   if(linguagem == 0){
     lg.style.backgroundImage = "url(Flag_of_the_United_States.svg.png)"
     linguagem = 1;
-  }else if (linguagem == 1){
-    lg.style.backgroundImage = "url(Flag_of_Brazil.svg.webp)"
-    linguagem = 0;
-  }
-
-  if(linguagem==0){
-    l1.innerHTML = "estoque"
-    l2.innerHTML = "catálogo"
-    l3.innerHTML = "reserva"
-  }
-  else{
+    lgn.innerHTML = "language"
     l1.innerHTML = "stock"
     l2.innerHTML = "catalog"
     l3.innerHTML = "reservation"
+    l4.innerHTML = "financing"
+    footerText.innerHTML = "A website that makes it happen"
+    searchPlaceholder.placeholder = "search for a car by name"
+    document.getElementById("li-nome1").innerHTML = "Name"
+    document.getElementById("li-marca1").innerHTML = "Brand"
+    document.getElementById("li-cor1").innerHTML = "Color"
+    document.getElementById("li-preco1").innerHTML = "Price"
+    document.getElementById("li-fabricante1").innerHTML = "Manufacturer"
+    document.getElementById("li-tipo1").innerHTML = "Type"
+    document.getElementById("li-combustivel1").innerHTML = "Fuel"
+    document.getElementById("li-nome2").innerHTML = "Name"
+    document.getElementById("li-marca2").innerHTML = "Brand"
+    document.getElementById("li-cor2").innerHTML = "Color"
+    document.getElementById("li-preco2").innerHTML = "Price"
+    document.getElementById("li-fabricante2").innerHTML = "Manufacturer"
+    document.getElementById("li-tipo2").innerHTML = "Type"
+    document.getElementById("li-combustivel2").innerHTML = "Fuel"
+    document.getElementById("sch-todos").innerHTML = "all"
+    document.getElementById("sch-novos").innerHTML = "new"
+    document.getElementById("sch-usados").innerHTML = "used"
+  } else {
+    lg.style.backgroundImage = "url(Flag_of_Brazil.svg.webp)"
+    linguagem = 0;
+    lgn.innerHTML = "linguagem"
+    l1.innerHTML = "estoque"
+    l2.innerHTML = "catálogo"
+    l3.innerHTML = "reserva"
+    l4.innerHTML = "financiamento"
+    footerText.innerHTML = "Um site que faz acontecer"
+    searchPlaceholder.placeholder = "pesquise um carro pelo nome"
+    document.getElementById("li-nome1").innerHTML = "Nome"
+    document.getElementById("li-marca1").innerHTML = "Marca"
+    document.getElementById("li-cor1").innerHTML = "Cor"
+    document.getElementById("li-preco1").innerHTML = "Preço"
+    document.getElementById("li-fabricante1").innerHTML = "Fabricante"
+    document.getElementById("li-tipo1").innerHTML = "Tipo"
+    document.getElementById("li-combustivel1").innerHTML = "Combustivel"
+    document.getElementById("li-nome2").innerHTML = "Nome"
+    document.getElementById("li-marca2").innerHTML = "Marca"
+    document.getElementById("li-cor2").innerHTML = "Cor"
+    document.getElementById("li-preco2").innerHTML = "Preço"
+    document.getElementById("li-fabricante2").innerHTML = "Fabricante"
+    document.getElementById("li-tipo2").innerHTML = "Tipo"
+    document.getElementById("li-combustivel2").innerHTML = "Combustivel"
+    document.getElementById("sch-todos").innerHTML = "todos"
+    document.getElementById("sch-novos").innerHTML = "novos"
+    document.getElementById("sch-usados").innerHTML = "usados"
   }
-
 }
 
 
-  var darkmd = 0
+var darkmd = 0
 function darkmode(){
   const balldm = document.getElementById("balldm")
   const darkspan = document.getElementById("darkmd")
+  const body = document.body
   
   balldm.classList.toggle("balldark")
-  if (darkmd == 0){
-  balldm.style.backgroundColor = "rgb(255, 232, 206)"
-  darkspan.style.backgroundColor = "rgba(0, 0, 0, 1)"
-  darkmd = 1
-  } else {
-  balldm.style.backgroundColor = "rgba(0, 0, 0, 1)"
-  darkspan.style.backgroundColor = "rgb(255, 232, 206)"
-  darkmd = 0
-  }
+  body.classList.toggle("dark-mode")
   
+  if (darkmd == 0){
+    balldm.style.backgroundColor = "rgb(255, 232, 206)"
+    darkspan.style.backgroundColor = "rgba(0, 0, 0, 1)"
+    darkmd = 1
+  } else {
+    balldm.style.backgroundColor = "rgba(0, 0, 0, 1)"
+    darkspan.style.backgroundColor = "rgb(255, 232, 206)"
+    darkmd = 0
+  }
 }
 
