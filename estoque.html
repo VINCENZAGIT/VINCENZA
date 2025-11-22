@@ -11,27 +11,68 @@
 
     <div id="upeerdiv">
         <div id="homeelogin">
-            <a  href="login.html"><i class="fa-regular fa-circle-user"></i>Login</a>
-            <a href="inicio.html" style="text-decoration:underline;">Home</a>
+            <div><a  href="login.html"><i class="fa-regular fa-circle-user"></i><span id="login-text">Login</span></a></div>
+            <div><a href="inicio.html" style="text-decoration:underline;" id="home-link">Home</a>
+            <a href="inicio.html" style="text-decoration:underline;" id="back-link">Voltar</a>
+                <div id="openconfig"  class="fa-solid fa-gear"><div id="config">
+                    <i id="gear" class="fa-solid fa-gear" ></i>
+                <div id="linguagem"><span id="lgn" onclick="changelg()">linguagem</span> <span id="linguagemslct" style="background-image:url(Flag_of_Brazil.svg.webp); background-position: center; background-size: cover; width: 2.5vh; height: 1.5vh; display: inline-block;"></span> 
+                </div>
+                <div id="darkmode"><span onclick="darkmode()" id="darkmd" style="transition: all 0.15s linear; display: flex; align-items: center; border: solid 0.1px black; position: relative; width: 3.5vh; height: 1vh; border-radius: 100px;"><span id="balldm" style="background-color: black; border: solid 0.1px black; margin: 0.25vh; transition: all 0.15s linear; left:0; height: 0.4vh; width: 0.4vh; border-radius: 100%; position: absolute;"></span></span></div>
+                </div>
+            </div>
+        </div>
+
         </div>
         <div id="buscadiv">
-            <li><input class="buscarmodelo" type="text" placeholder=" marca"><input type="text" placeholder=" modelo"></li>
-            <li><input type="text" placeholder=" modelo"><input type="text" placeholder=" modelo"></li>
-            <li><input type="text" style="width: 66%;"><input onclick="changecar()" id="buscarcarro" type="button" value="Buscar Carro" style="width: 30.2%;"></li>
+            <li><input class="buscarmodelo" type="text" id="input-marca" placeholder=" Marca"><input type="text" id="input-modelo" placeholder=" Modelo"></li>
+            <li><input type="text" id="input-modelo2" placeholder=" Ano"><input type="text" id="input-modelo3" placeholder=" Combustível"></li>
+            <li><input type="text" id="input-search" style="width: 66%;" placeholder=" Câmbio"><input onclick="changecar()" id="buscarcarro" type="button" value="Buscar Carro" style="width: 30.2%;"></li>
         </div>
 
     </div>    
 
+
+        <p id="textrecomendacoes">Recomendados para você</p>
+
     <div id="catalog">
         <div id="section360"><section class="container">
-        <img class="carimg" src="./estoque/amarok/1.webp" alt="car">
+        <img class="carimg" src="./amarok/1.webp" alt="car">
+        <div id="especificacoes">
+            <h3 id="spec-title">Especificações</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label" id="label-marca">Marca</span>
+                    <span class="spec-value" id="spec-marca">Volkswagen</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label" id="label-nome">Modelo</span>
+                    <span class="spec-value" id="spec-nome">Amarok</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label" id="label-ano">Ano</span>
+                    <span class="spec-value" id="spec-ano">2003</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label" id="label-combustivel">Combustível</span>
+                    <span class="spec-value" id="spec-combustivel">Diesel</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label" id="label-cambio">Câmbio</span>
+                    <span class="spec-value" id="spec-cambio">Manual</span>
+                </div>
+            </div>
+        </div>
     </section></div>
     <div id="bottondiv">
+        
     </div></div>
-     <button onclick="addc()">Adicionar Item</button>
+     <button onclick="addc()" id="add-item-btn">Adicionar Item</button>
 
     <script src="estoque.js"></script>
     
 </body>
 
 </html>
+
+
