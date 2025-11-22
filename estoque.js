@@ -218,5 +218,4 @@ function darkmode(){
   }
 }
 
-    }
 
