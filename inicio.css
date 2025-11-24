@@ -1,3 +1,4 @@
+
 #upperbar{
     z-index: 100;
     position: fixed;
@@ -417,6 +418,16 @@
 }
 
 
+.dark-mode #openconfig:hover #config {
+    background-color: #2d2d2d;
+    border: #666 solid .1px;
+}
+
+
+.dark-mode #logo{
+    margin-left: 1.7vh;
+}
+
 .dark-mode #upper2 a:hover span{
     font:bold;
     opacity: 100%;
@@ -532,4 +543,5 @@
     font-size: 20%;
 }
 }
+
 
