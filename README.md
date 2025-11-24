@@ -25,6 +25,10 @@
  
  RF18 – Catálogo online de veículos disponíveis
 
+ RF19 - Possibilidade de usar um veículo como entrada para adquirir outro veículo, o usuário deve fazer um upload de informações sobre o veículo para que tenha uma análise do             nossosistema.
+
+ RF20 - Mostrar os carros mais buscados.
+
 
 ## Integrantes
 Samuel Macedo Cruz Alves - 20302042
