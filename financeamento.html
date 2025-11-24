@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/619d5231f4.js" crossorigin="anonymous"></script>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="financeamento.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="upeerdiv">
+        <div id="homeelogin">
+            <div><a  href="login.html"><i class="fa-regular fa-circle-user"></i><span id="login-text">Login</span></a></div>
+            <div><a href="index.html" style="text-decoration:underline;" id="home-link">Home</a>
+            <a href="index.html" style="text-decoration:underline;" id="back-link">Voltar</a>
+                <div id="openconfig"  class="fa-solid fa-gear"><div id="config">
+                    <i id="gear" class="fa-solid fa-gear" ></i>
+                <div id="linguagem"><span id="lgn" onclick="changelg()">linguagem</span> <span id="linguagemslct" style="background-image:url(Flag_of_Brazil.svg.webp); background-position: center; background-size: cover; width: 2.5vh; height: 1.5vh; display: inline-block;"></span> 
+                </div>
+                <div id="darkmode"><span onclick="darkmode()" id="darkmd" style="transition: all 0.15s linear; display: flex; align-items: center; border: solid 0.1px black; position: relative; width: 3.5vh; height: 1vh; border-radius: 100px;"><span id="balldm" style="background-color: black; border: solid 0.1px black; margin: 0.25vh; transition: all 0.15s linear; left:0; height: 0.4vh; width: 0.4vh; border-radius: 100%; position: absolute;"></span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    </div>
+
+    <div id="texto"> As melhores ofertas e melhores promoções atualmente </div>
+
+    <div id="cars-grid">
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Amarok">
+            <h3>Amarok</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 180.000</span>
+                <span class="new-price">R$ 150.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Civic">
+            <h3>Civic</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 120.000</span>
+                <span class="new-price">R$ 95.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="Polo">
+            <h3>Polo</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 85.000</span>
+                <span class="new-price">R$ 70.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./fiat500/1.webp" alt="Fiat 500">
+            <h3>Fiat 500</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 75.000</span>
+                <span class="new-price">R$ 60.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="BMW X4">
+            <h3>BMW X4</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 250.000</span>
+                <span class="new-price">R$ 220.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Mercedes A180">
+            <h3>Mercedes A180</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 200.000</span>
+                <span class="new-price">R$ 175.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="Honda HR-V">
+            <h3>Honda HR-V</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 140.000</span>
+                <span class="new-price">R$ 125.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Corolla">
+            <h3>Corolla</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 110.000</span>
+                <span class="new-price">R$ 95.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Onix">
+            <h3>Onix</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 65.000</span>
+                <span class="new-price">R$ 55.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="Golf">
+            <h3>Golf</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 130.000</span>
+                <span class="new-price">R$ 115.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./fiat500/1.webp" alt="Uno">
+            <h3>Uno</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 45.000</span>
+                <span class="new-price">R$ 38.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="Tucson">
+            <h3>Tucson</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 160.000</span>
+                <span class="new-price">R$ 145.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Compass">
+            <h3>Compass</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 155.000</span>
+                <span class="new-price">R$ 140.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="Fit">
+            <h3>Fit</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 70.000</span>
+                <span class="new-price">R$ 62.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Hilux">
+            <h3>Hilux</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 220.000</span>
+                <span class="new-price">R$ 195.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Cruze">
+            <h3>Cruze</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 90.000</span>
+                <span class="new-price">R$ 78.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="Jetta">
+            <h3>Jetta</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 125.000</span>
+                <span class="new-price">R$ 110.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./fiat500/1.webp" alt="Argo">
+            <h3>Argo</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 68.000</span>
+                <span class="new-price">R$ 58.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="Creta">
+            <h3>Creta</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 105.000</span>
+                <span class="new-price">R$ 92.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Renegade">
+            <h3>Renegade</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 135.000</span>
+                <span class="new-price">R$ 118.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="City">
+            <h3>City</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 95.000</span>
+                <span class="new-price">R$ 82.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Ranger">
+            <h3>Ranger</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 210.000</span>
+                <span class="new-price">R$ 185.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Prisma">
+            <h3>Prisma</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 58.000</span>
+                <span class="new-price">R$ 48.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="Sandero">
+            <h3>Sandero</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 72.000</span>
+                <span class="new-price">R$ 63.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="Duster">
+            <h3>Duster</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 98.000</span>
+                <span class="new-price">R$ 85.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="Logan">
+            <h3>Logan</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 68.000</span>
+                <span class="new-price">R$ 59.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Kwid">
+            <h3>Kwid</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 52.000</span>
+                <span class="new-price">R$ 45.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Captur">
+            <h3>Captur</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 115.000</span>
+                <span class="new-price">R$ 102.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Sentra">
+            <h3>Sentra</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 105.000</span>
+                <span class="new-price">R$ 92.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="Frontier">
+            <h3>Frontier</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 195.000</span>
+                <span class="new-price">R$ 175.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="Cronos">
+            <h3>Cronos</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 75.000</span>
+                <span class="new-price">R$ 65.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Toro">
+            <h3>Toro</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 145.000</span>
+                <span class="new-price">R$ 128.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Strada">
+            <h3>Strada</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 78.000</span>
+                <span class="new-price">R$ 68.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="Pulse">
+            <h3>Pulse</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 92.000</span>
+                <span class="new-price">R$ 82.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./civic/1.webp" alt="Fastback">
+            <h3>Fastback</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 118.000</span>
+                <span class="new-price">R$ 105.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./x4/1.webp" alt="T-Cross">
+            <h3>T-Cross</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 125.000</span>
+                <span class="new-price">R$ 112.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./fiat500/1.webp" alt="Nivus">
+            <h3>Nivus</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 95.000</span>
+                <span class="new-price">R$ 85.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./honda-hr-v/1.webp" alt="Virtus">
+            <h3>Virtus</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 88.000</span>
+                <span class="new-price">R$ 78.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./mercedesa180/1.webp" alt="Tiguan">
+            <h3>Tiguan</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 185.000</span>
+                <span class="new-price">R$ 165.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./amarok/1.webp" alt="Versa">
+            <h3>Versa</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 82.000</span>
+                <span class="new-price">R$ 72.000</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="./polo/1.webp" alt="March">
+            <h3>March</h3>
+            <div class="price-container">
+                <span class="old-price">R$ 55.000</span>
+                <span class="new-price">R$ 47.000</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="pagination">
+        <button onclick="loadMoreCars()" id="load-more-btn">Carregar Mais Carros</button>
+    </div>
+
+    <div id="car-popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeCarPopup()">&times;</span>
+            <div id="popup-section360" class="popup-car-360">
+                <section class="popup-container">
+                    <img class="popup-carimg" src="./amarok/1.webp" alt="car">
+                </section>
+            </div>
+            <div class="popup-car-info">
+                <div class="popup-specs">
+                    <h3>Especificações</h3>
+                    <p><strong>Modelo:</strong> <span id="popup-model"></span></p>
+                    <p><strong>Ano:</strong> <span id="popup-year">2020</span></p>
+                    <p><strong>Combustível:</strong> <span id="popup-fuel">Flex</span></p>
+                    <p><strong>Câmbio:</strong> <span id="popup-transmission">Manual</span></p>
+                    <p><strong>Cor:</strong> <span id="popup-color">Branco</span></p>
+                </div>
+                <div class="popup-purchase">
+                    <h3>Opções de Compra</h3>
+                    <p><strong>Preço à vista:</strong> <span id="popup-price"></span></p>
+                    <div class="installment-options">
+                        <div class="installment-option" onclick="selectInstallment(12)">
+                            <span>12x</span>
+                            <span id="installment-12"></span>
+                        </div>
+                        <div class="installment-option" onclick="selectInstallment(24)">
+                            <span>24x</span>
+                            <span id="installment-24"></span>
+                        </div>
+                        <div class="installment-option" onclick="selectInstallment(36)">
+                            <span>36x</span>
+                            <span id="installment-36"></span>
+                        </div>
+                        <div class="installment-option" onclick="selectInstallment(48)">
+                            <span>48x</span>
+                            <span id="installment-48"></span>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="purchaseCar()">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="finaceamento.js"></script>
+</body>
+</html>
