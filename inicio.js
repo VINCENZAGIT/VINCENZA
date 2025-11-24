@@ -1,3 +1,4 @@
+
 var carroatual = 0;
 
 function backcar(){
@@ -213,6 +214,7 @@ function changelg(){
 
 var darkmd = 0
 function darkmode(){
+  const logo = document.getElementById("logo")
   const balldm = document.getElementById("balldm")
   const darkspan = document.getElementById("darkmd")
   const body = document.body
@@ -221,13 +223,16 @@ function darkmode(){
   body.classList.toggle("dark-mode")
   
   if (darkmd == 0){
+    logo.src = "1000035516-removebg-preview.png"
     balldm.style.backgroundColor = "rgb(255, 232, 206)"
     darkspan.style.backgroundColor = "rgba(0, 0, 0, 1)"
     darkmd = 1
   } else {
+    logo.src = "1000018033.png"
     balldm.style.backgroundColor = "rgba(0, 0, 0, 1)"
     darkspan.style.backgroundColor = "rgb(255, 232, 206)"
     darkmd = 0
   }
 }
+
 
