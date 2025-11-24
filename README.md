@@ -5,29 +5,29 @@
  VINCENZA é uma concessionária online, nosso objetivo é facilitar a vida de quem deseja comprar um carro sem precisar ir para uma loja física, fazemos todo o processo de forma remota, portanto será possível comprar e até mesmo vender seu carro usado para dar de entrada, fazemos parcelas justas além de oferecermos um rico catálogo eficiente.
 
 ✅ Requisitos
- RF01 – O sistema deve permitir o cadastro de usuários
+ ! RF01 – O sistema deve permitir o cadastro de usuários >> Samuel
  
- RF02 – O usuário deve poder redefinir a senha
+ ! RF02 – O usuário deve poder redefinir a senha >> Samuel
  
- RF06 – O usuário deve poder alternar para o modo escuro
+ +! RF06 – O usuário deve poder alternar para o modo escuro >> Rodrigo terminar
  
- RF08 – O sistema deve oferecer suporte a múltiplos idiomas
+ +! RF08 – O sistema deve oferecer suporte a múltiplos idiomas >> Rodrigo terminar
  
- RF09 – Mostrar possíveis planos de financiamento para compra do carro
+ + RF09 – Mostrar possíveis planos de financiamento para compra do carro 
  
- RF11 – Informação sobre disponibilidade do veículo no estoque da concessionária
+ ! RF11 – Informação sobre disponibilidade do veículo no estoque da concessionária >> Samuel
  
- RF14 – Visualização 360° de todos os carros mais vendidos
+ + RF14 – Visualização 360° de todos os carros mais vendidos
  
- RF15 – Página de oferta de veículos
+ + RF15 – Página de oferta de veículos
  
- RF16 – Reserva online de veículos
+ ! RF16 – Reserva online de veículos >> Rodrigo
  
- RF18 – Catálogo online de veículos disponíveis
+ + RF18 – Catálogo online de veículos disponíveis
 
- RF19 - Possibilidade de usar um veículo como entrada para adquirir outro veículo, o usuário deve fazer um upload de informações sobre o veículo para que tenha uma análise do             nossosistema.
+ ! RF19 - Possibilidade de usar um veículo como entrada para adquirir outro veículo, o usuário deve fazer um upload de informações sobre o veículo para que tenha uma análise do nossosistema. >> Samuel, Raul e Rodrigo (ultimo a ser feito)
 
- RF20 - Mostrar os carros mais buscados.
+ ! RF20 - Mostrar os carros mais buscados. >> Raul e Samuel (a decidir)
 
 
 ## Integrantes
