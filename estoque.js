@@ -11,7 +11,15 @@ const estoque=[
     {car:"fiat500", i: 29},
     {car:"honda-hr-v", i: 32},
     {car:"polo", i: 31},
-
+    {car:"bronco", i: 32},
+    {car:"bamry", i: 32},
+    {car:"compass", i: 32},
+    {car:"eqs", i: 31},
+    {car:"audi_q3", i: 33},
+    {car:"compass", i: 32},
+    {car:"volvoxc60", i: 31},
+    {car:"captur", i: 31},
+    {car:"e-tron-gt", i: 32},
 
     {car: "fim"}
 ];
@@ -25,7 +33,7 @@ function changecar(){
     estoque.forEach(car => {
         if(car.car == search){
             console.log("O carro existe");
-            currentcar = search;
+            currentcar = car.folder || search;
             imgcar.src = `./${currentcar}/${currentImage}.webp`;
             existe=true;
             max = car.i
@@ -42,7 +50,7 @@ function changecar2(){
     estoque.forEach(car => {
         if(car.car == search){
             console.log("O carro existe");
-            currentcar = search;
+            currentcar = car.folder || search;
             imgcar.src = `./${currentcar}/${currentImage}.webp`;
             existe=true;
             max = car.i
@@ -108,33 +116,39 @@ let contador = 1;
     function addc() {
       let grid = document.getElementById("bottondiv");
         
-      let num = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+      let num = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+      let card = document.createElement("div");
       let img = document.createElement("img");
-      let item = document.createElement("section");
-      item.innerText = estoque[num].car;
-
-      grid.appendChild(item);
-      item.appendChild(img);
+      let title = document.createElement("h3");
+      let price = document.createElement("div");
+      
+      card.classList.add("stock-car-card");
+      title.textContent = estoque[num].car;
+      price.textContent = "R$ 85.000";
+      price.classList.add("stock-price");
       img.src = `./${estoque[num].car}/1.webp`;
-      item.classList.add("item");
-      img.classList.add("imgitem");
-      item.addEventListener("click", function( ){
+      
+      card.appendChild(img);
+      card.appendChild(title);
+      card.appendChild(price);
+      grid.appendChild(card);
+      
+      card.addEventListener("click", function(){
         var existe = false;
-    var search = item.innerText.toLowerCase()
-    estoque.forEach(car => {
-        if(car.car == search){
-            console.log("O carro existe");
-            currentcar = search;
-            imgcar.src = `./${currentcar}/${currentImage}.webp`;
-            existe=true;
-            max = car.i
-        }
-        if(car.car == "fim" && existe==false){
-            console.log("O carro não existe")
-        }
-    });
+        var search = title.textContent.toLowerCase()
+        estoque.forEach(car => {
+            if(car.car == search){
+                console.log("O carro existe");
+                currentcar = car.folder || search;
+                imgcar.src = `./${currentcar}/${currentImage}.webp`;
+                existe=true;
+                max = car.i
+            }
+            if(car.car == "fim" && existe==false){
+                console.log("O carro não existe")
+            }
+        });
       })
-
     }
 
 var linguagem = 0
@@ -188,7 +202,6 @@ function changelg(){
     inputModelo2.placeholder = " Ano"
     inputModelo3.placeholder = " Combustível"
     document.getElementById("input-search").placeholder = " Câmbio"
-    // Traduzir especificações
     if(document.getElementById("spec-title")) document.getElementById("spec-title").innerHTML = "Especificações"
     if(document.getElementById("label-nome")) document.getElementById("label-nome").innerHTML = "Nome"
     if(document.getElementById("label-marca")) document.getElementById("label-marca").innerHTML = "Marca"
@@ -217,5 +230,7 @@ function darkmode(){
     darkmd = 0
   }
 }
+
+
 
 
