@@ -43,37 +43,7 @@ function darkmode(){
   }
 }
 
-const moreCars = [
-  {name: "Sandero", oldPrice: "R$ 72.000", newPrice: "R$ 63.000", img: "./polo/1.webp"},
-  {name: "Logan", oldPrice: "R$ 68.000", newPrice: "R$ 59.000", img: "./civic/1.webp"},
-  {name: "Duster", oldPrice: "R$ 98.000", newPrice: "R$ 85.000", img: "./x4/1.webp"},
-  {name: "Kwid", oldPrice: "R$ 52.000", newPrice: "R$ 45.000", img: "./fiat500/1.webp"},
-  {name: "Mobi", oldPrice: "R$ 48.000", newPrice: "R$ 42.000", img: "./fiat500/1.webp"},
 
-  {name: "Captur", oldPrice: "R$ 115.000", newPrice: "R$ 102.000", img: "./honda-hr-v/1.webp"},
-  {name: "Kicks", oldPrice: "R$ 88.000", newPrice: "R$ 76.000", img: "./mercedesa180/1.webp"}
-];
-
-function loadMoreCars() {
-  const grid = document.getElementById("cars-grid");
-  const btn = document.getElementById("load-more-btn");
-  
-  moreCars.forEach(car => {
-    const carCard = document.createElement("div");
-    carCard.className = "car-card";
-    carCard.innerHTML = `
-      <img src="${car.img}" alt="${car.name}">
-      <h3>${car.name}</h3>
-      <div class="price-container">
-        <span class="old-price">${car.oldPrice}</span>
-        <span class="new-price">${car.newPrice}</span>
-      </div>
-    `;
-    grid.appendChild(carCard);
-  });
-  
-  btn.style.display = "none";
-}
 
 function updateCarOpacity() {
   const cards = document.querySelectorAll('.car-card');
@@ -141,22 +111,31 @@ function openCarPopup(carName, carPrice, carImage) {
     price: parseFloat(carPrice.replace('R$ ', '').replace('.', '').replace(',', '.'))
   };
   
-  // Set car for 360 view
   const carFolderMap = {
     "amarok": "amarok", "civic": "civic", "polo": "polo", "fiat 500": "fiat500",
     "bmw x4": "x4", "x4": "x4", "mercedes a180": "mercedesa180", "mercedesa180": "mercedesa180",
     "honda hr-v": "honda-hr-v", "honda-hr-v": "honda-hr-v", "corolla": "amarok",
-    "onix": "civic", "golf": "polo", "uno": "fiat500", "tucson": "x4",
-    "compass": "mercedesa180", "fit": "honda-hr-v", "hilux": "amarok",
+    "onix": "e-tron-gt", "golf": "polo", "uno": "fiat500", "tucson": "x4",
+    "compass": "compass", "fit": "honda-hr-v", "hilux": "amarok",
     "cruze": "civic", "jetta": "polo", "argo": "fiat500", "creta": "x4",
     "renegade": "mercedesa180", "city": "honda-hr-v", "ranger": "amarok",
     "prisma": "civic", "sandero": "polo", "duster": "x4", "logan": "honda-hr-v",
-    "kwid": "mercedesa180", "captur": "amarok"
+    "kwid": "mercedesa180", "captur": "captur", "mobi": "fiat500", "kicks": "mercedesa180",
+    "sentra": "civic", "frontier": "x4", "cronos": "honda-hr-v", "toro": "mercedesa180",
+    "strada": "amarok", "pulse": "polo", "fastback": "civic", "t-cross": "x4",
+    "nivus": "fiat500", "virtus": "honda-hr-v", "tiguan": "mercedesa180", "versa": "amarok",
+    "march": "polo", "bronco": "bronco", "bamry": "bamry", "eqs": "eqs", "audi_q3": "audi_q3",
+    "volvoxc60": "volvoxc60", "e-tron-gt": "e-tron-gt", "bronco sport": "bronco", "camry hybrid": "bamry",
+    "compass limited": "compass", "eqs amg": "eqs", "q3 sportback": "audi_q3", "xc60 recharge": "volvoxc60"
   };
   
   const carMaxImages = {
     "amarok": 31, "civic": 31, "polo": 31, "x4": 31,
-    "mercedesa180": 32, "fiat500": 29, "honda-hr-v": 32
+    "mercedesa180": 32, "fiat500": 29, "honda-hr-v": 32,
+    "fiat 500": 29, "x4": 31, "mercedesa180": 32,
+    "polo": 31, "bronco": 32, "bamry": 32,
+    "compass": 32, "eqs": 31, "audi_q3": 33, "compass": 32, "volvoxc60": 31,
+    "captur": 31, "e-tron-gt": 32
   };
   
   popupCurrentCar = carFolderMap[carName.toLowerCase()] || "amarok";
